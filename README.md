@@ -16,7 +16,8 @@ Even(n) =>
     Natural(q);
     n = 2*q;
 
-?Even(2);
+Natural(p);
+?Even(2*p);
 ```
 
 Returns `true`.
