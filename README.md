@@ -1,2 +1,2 @@
-# turbo
-Fun toy language.
+# Turbo
+A state-based programming language.
