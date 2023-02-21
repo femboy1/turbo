@@ -14,7 +14,7 @@ Turbo is a simple and naive predicate resolver. It can resolve simple predicate 
 ```
 Even(n) => 
     Natural(q);
-    !q: n = 2*q;
+    n = 2*q;
 
 ?Even(2);
 ```
