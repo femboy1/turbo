@@ -89,3 +89,23 @@ A(b);
 
 *Because* Turbo is interpreted, very few "flattening" expressions are needed. Turbo will just run through these operations, appending the qualifiers in real time, and then running `Resolve(a, b)`.
 
+Now, take a much, much more complicated example:
+
+```js
+U(x) =>
+    N(x);
+    A(x);
+
+A(x) => 
+    N(x);
+
+U(a);
+
+A(b);
+
+? a = b;
+```
+
+To a human, it is immediately obvious that `a = b` in this context, but to a dumb computer, it will spit out `false` since you will get the two differing predicate sets `{N(φ), A(φ)}` and `{A(φ)}`. Here, we must flatten the expression to reduce the proposition to `{N(φ), N(φ)} => {N(φ)}` and `{N(φ)}`.
+
+### Defining the Fundamental Operations of Predicate Algebra
